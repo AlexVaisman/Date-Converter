@@ -16,7 +16,12 @@ let hdate = {
     paraseDate: function(){
         let d;
         d = new Date(document.querySelector(".search-date").value);
-        this.getHDate(d.getUTCFullYear(),d.getMonth()+1,d.getDate());
+        if(!isNaN(d.valueOf())){
+            this.getHDate(d.getUTCFullYear(),d.getMonth()+1,d.getDate());
+        }else{
+            document.querySelector(".hebrewDate").innerText = "Invalid date.";
+        }
+        
     }
 };
 
