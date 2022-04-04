@@ -9,7 +9,6 @@ let hdate = {
         const { hm } = data;
         const { hd } = data;
         const { hebrew } = data;
-        console.log(hy,hm,hd,hebrew);
         document.querySelector(".hebrewDate").innerText = "Hebrew date: \n"+
         hd+", "+hm+", "+hy+ "\n"+ hebrew;
     },
